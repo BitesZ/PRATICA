@@ -1,0 +1,50 @@
+@keyframes animacao1 {
+    /*SIMPLES COM APENAS FROM E TO
+    from {background-color: blue;}
+    to {background-color: purple;width: 50px;height: 50px}*/
+
+    /*COM %*/
+    0% {background-color: blue;}
+    20% {background-color: aqua;}
+    40% {background-color: blueviolet;}
+    60% {background-color: red}
+    80% {background-color: pink;}
+    100% {background-color: blue;}
+}
+
+@keyframes animacao3 {
+    0% {width: 400px;}
+    20% {height: 650px}
+    40% {width: 325px}
+    60% {height: 325px}
+    80% {width: 1320px;height: 650px}
+    100%{width: 400px; height: 400px}
+}
+
+@keyframes animacao3 {
+    0% {background-color: blue;width: 400px;}
+    20% {background-color: aqua;height: 650px}
+    40% {background-color: blueviolet;width: 325px}
+    60% {background-color: red;height: 325px}
+    80% {background-color: pink;width: 1320px;height: 650px}
+    100%{background-color: blue;width: 400px; height: 400px}
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.quadrado {
+    width: 400px;
+    height: 400px;
+    background-color: blue;
+    /* Simples com apenas 1 animação
+    animation-name: animacao1;
+    animation-duration: 8s;
+    animation-delay: 2s;*/
+
+    /*Mais de 1 animação*/
+    animation: animacao1 1 8s 2s, animacao2 12s 12s, animacao3 12s 14s infinite; 
+    /*infinite permite a criação de um loop infinito de uma animação*/
+}
